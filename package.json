@@ -1,0 +1,39 @@
+{
+  "name": "google-books-search",
+  "version": "1.0.0",
+  "description": "Server side package with express and mongo",
+  "main": "server.js",
+  "scripts": {
+    "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
+    "start:prod": "node server.js",
+    "start:dev": "concurrently \"nodemon --ignore 'client/*'\" \"npm run client\"",
+    "client": "cd client && npm run start",
+    "install": "cd client && npm install",
+    "build": "cd client && npm run build",
+    "heroku-postbuild": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mkkiyoi/Google-Books-Search.git"
+  },
+  "keywords": [
+    "Node",
+    "Express",
+    "React",
+    "MongoDB"
+  ],
+  "author": "Matthew Kiyoi",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^4.1.0",
+    "nodemon": "^1.18.7"
+  },
+  "dependencies": {
+    "express": "^4.16.3",
+    "if-env": "^1.0.4"
+  },
+  "bugs": {
+    "url": "https://github.com/Mkkiyoi/Google-Books-Search/issues"
+  },
+  "homepage": "https://github.com/Mkkiyoi/Google-Books-Search#readme"
+}
