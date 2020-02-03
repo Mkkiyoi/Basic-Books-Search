@@ -15,7 +15,7 @@ class DeleteBookButton extends Component {
 
   render() {
     return (
-      <Button variant="secondary" onClick={() => {this.deleteBook(this.props)}}>Delete Book</Button>
+      <Button variant="secondary" onClick={() => {this.deleteBook(this.props.key)}}>Delete Book</Button>
     );
   }
 }
