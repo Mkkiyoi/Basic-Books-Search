@@ -10,7 +10,8 @@
     "client": "cd client && npm run start",
     "install": "cd client && npm install",
     "build": "cd client && npm run build",
-    "heroku-postbuild": "npm run build"
+    "heroku-postbuild": "npm run build",
+    "seeds": "cd scripts && node seedDB.js"
   },
   "repository": {
     "type": "git",
@@ -30,7 +31,9 @@
   },
   "dependencies": {
     "express": "^4.16.3",
-    "if-env": "^1.0.4"
+    "if-env": "^1.0.4",
+    "mongoose": "^5.8.10",
+    "path": "^0.12.7"
   },
   "bugs": {
     "url": "https://github.com/Mkkiyoi/Google-Books-Search/issues"
