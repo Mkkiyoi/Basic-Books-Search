@@ -62,6 +62,7 @@ class Search extends Component {
                   description={book.volumeInfo.description ? book.volumeInfo.description : "No Description Available"}
                   link={book.volumeInfo.infoLink}
                   thumbnail={book.volumeInfo.imageLinks ? book.volumeInfo.imageLinks.thumbnail : "#"}
+                  onSaved={false}
                 />
               );
             })};

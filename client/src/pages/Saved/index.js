@@ -41,6 +41,7 @@ class Search extends Component {
                     description={book.description}
                     link={book.link}
                     thumbnail={book.image}
+                    onSaved={true}
                   />
                 </div>
               );

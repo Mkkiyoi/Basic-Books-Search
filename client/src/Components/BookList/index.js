@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {Button, Col, Row, Image, Card} from 'react-bootstrap';
 import SaveBookButton from '../SaveBookButton';
+import DeleteBookButton from '../DeleteBookButton';
 
 class BookList extends Component {
   render () {
@@ -19,13 +20,16 @@ class BookList extends Component {
                 {this.props.description}
               </Card.Text>
               <Button variant="secondary" href={this.props.link} className="mr-3" target="_blank">View Book</Button>
-              <SaveBookButton
-                title={this.props.title}
-                authors={this.props.authors}
-                description={this.props.description}
-                link={this.props.link}
-                thumbnail={this.props.thumbnail}
-              />
+              {this.props.onSaved ? 
+                (<DeleteBookButton id={this.props.key}/>)
+                :
+                (<SaveBookButton
+                  title={this.props.title}
+                  authors={this.props.authors}
+                  description={this.props.description}
+                  link={this.props.link}
+                  thumbnail={this.props.thumbnail}
+                />)}
             </Card.Body>
           </Card>
         </Col>
