@@ -5,8 +5,8 @@ import API from '../../utils/API';
 
 class DeleteBookButton extends Component {
 
-  deleteBook = (book) => {
-    API.deleteBook(book.id).then(() => {
+  deleteBook = (id) => {
+    API.deleteBook(id).then(() => {
       window.location.reload();
     }).catch((error)=> {
       console.log(error);
