@@ -9,6 +9,7 @@ class DeleteBookButton extends Component {
     API.deleteBook(id).then(() => {
       window.location.reload();
     }).catch((error)=> {
+      console.log(this.props)
       console.log(error);
     });
   };
