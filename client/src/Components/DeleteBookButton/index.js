@@ -9,14 +9,13 @@ class DeleteBookButton extends Component {
     API.deleteBook(id).then(() => {
       window.location.reload();
     }).catch((error)=> {
-      console.log(this.props)
       console.log(error);
     });
   };
 
   render() {
     return (
-      <Button variant="secondary" onClick={() => {this.deleteBook(this.props.key)}}>Delete Book</Button>
+      <Button variant="secondary" onClick={() => {this.deleteBook(this.props.id)}}>Delete Book</Button>
     );
   }
 }
