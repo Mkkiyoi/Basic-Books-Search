@@ -21,7 +21,7 @@ class BookList extends Component {
               </Card.Text>
               <Button variant="secondary" href={this.props.link} className="mr-3" target="_blank">View Book</Button>
               {this.props.onSaved ? 
-                (<DeleteBookButton id={this.props.key}/>)
+                (<DeleteBookButton id={this.props.id}/>)
                 :
                 (<SaveBookButton
                   title={this.props.title}

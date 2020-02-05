@@ -56,7 +56,8 @@ class Search extends Component {
             {this.state.books.map(book => {
               return (
                 <BookList 
-                  key={book._id}
+                  key={book.id}
+                  id={book.id}
                   title={book.volumeInfo.title}
                   authors={book.volumeInfo.authors ? book.volumeInfo.authors.join(', ') : "No Authors Available"}
                   description={book.volumeInfo.description ? book.volumeInfo.description : "No Description Available"}

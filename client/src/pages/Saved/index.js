@@ -36,6 +36,7 @@ class Search extends Component {
                 <div>
                   <BookList 
                     key={book._id}
+                    id={book._id}
                     title={book.title}
                     authors={book.authors}
                     description={book.description}
