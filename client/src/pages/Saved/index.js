@@ -45,14 +45,14 @@ class Search extends Component {
                     onSaved={true}
                   />
                 </div>
-              );
+              )
             })}
           </div> 
           : 
           <div></div>
         }
       </div>
-    );
+    )
   }
 }
 

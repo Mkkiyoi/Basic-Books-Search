@@ -65,14 +65,14 @@ class Search extends Component {
                   thumbnail={book.volumeInfo.imageLinks ? book.volumeInfo.imageLinks.thumbnail : "#"}
                   onSaved={false}
                 />
-              );
-            })};
+              )
+            })}
           </div> 
           : 
           <div></div>
         }
       </div>
-    );
+    )
   }
 }
 
